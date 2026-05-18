@@ -69,6 +69,296 @@ Nesse exemplo:
 | 3 | |
 | 4 | |
 
+⚠️ O último índice sempre será:
+
+```c
+tamanho - 1
+```
+
+---
+
+#  Inicialização de Vetores
+
+## Inicializando na declaração
+
+```c
+int numeros[5] = {10, 20, 30, 40, 50};
+```
+
+---
+
+## Inicialização parcial
+
+```c
+int numeros[5] = {10, 20};
+```
+
+As posições restantes recebem `0`.
+
+---
+
+## Vetor sem tamanho definido
+
+```c
+int numeros[] = {1, 2, 3, 4};
+```
+
+O compilador calcula automaticamente o tamanho.
+
+---
+
+#  Acessando Elementos
+
+## Sintaxe
+
+```c
+vetor[indice]
+```
+
+## Exemplo
+
+```c
+int numeros[5] = {10, 20};
+printf("%d", numeros[0]);
+```
+
+Saída:
+
+```txt
+10
+```
+
+---
+
+# Alterando Valores
+
+Podemos modificar posições específicas.
+
+## Exemplo
+
+```c
+int numeros[2] = {10, 20};
+printf("%d\n", numeros[1]);
+numeros[1] = 100;
+printf("%d\n", numeros[1]);
+```
+
+---
+
+#  Percorrendo Vetores
+
+O mais comum é utilizar o `for`.
+
+## Exemplo
+
+```c
+for(int i = 0; i < 5; i++) {
+
+    printf("%d\n", numeros[i]);
+
+}
+```
+
+---
+
+#  Entrada de Dados em Vetores
+
+## Exemplo
+
+```c
+for(int i = 0; i < 5; i++) {
+
+    scanf("%d", &numeros[i]);
+
+}
+```
+
+---
+
+#  Saída de Dados
+
+## Exemplo
+
+```c
+for(int i = 0; i < 5; i++) {
+
+    printf("%d\n", numeros[i]);
+
+}
+```
+
+---
+
+# Memória no Vetor
+
+Os elementos ficam armazenados em posições contínuas da memória.
+
+## Exemplo
+
+| Índice | Valor | Endereço |
+|---|---|---|
+| 0 | 10 | 1000 |
+| 1 | 20 | 1004 |
+| 2 | 30 | 1008 |
+
+---
+
+#  Tamanho do Vetor
+
+## Obtendo o tamanho
+
+```c
+sizeof(vetor) / sizeof(vetor[0])
+```
+
+## Exemplo
+
+```c
+int tamanho = sizeof(numeros) / sizeof(numeros[0]);
+```
+Essa expressão é muito utilizada em C para descobrir quantos elementos existem em um vetor.
+
+---
+
+#  Entendendo o `sizeof`
+
+O operador `sizeof` retorna a quantidade de bytes ocupada por algo na memória.
+
+---
+
+#  Exemplo
+
+```c
+int numeros[5];
+```
+
+Sabemos que:
+
+- Um `int` normalmente ocupa `4 bytes`
+- O vetor possui `5 elementos`
+
+Logo:
+
+```txt
+5 × 4 = 20 bytes
+```
+
+Então:
+
+```c
+sizeof(numeros)
+```
+
+retorna:
+
+```txt
+20
+```
+
+---
+
+#  Pegando o tamanho de um elemento
+
+Agora observe:
+
+```c
+sizeof(numeros[0])
+```
+
+`numeros[0]` representa apenas um elemento do vetor.
+
+Como ele é um `int`, normalmente ocupa:
+
+```txt
+4 bytes
+```
+
+---
+
+#  Fazendo a divisão
+
+Temos:
+
+```c
+sizeof(numeros) / sizeof(numeros[0])
+```
+
+Substituindo pelos valores:
+
+```txt
+20 / 4 = 5
+```
+
+Resultado:
+
+```txt
+5 elementos
+```
+
+---
+
+---
+
+#  Tipos de Vetores
+
+## Vetor de inteiros
+
+```c
+int numeros[5];
+```
+
+---
+
+## Vetor de float
+
+```c
+float notas[10];
+```
+
+---
+
+## Vetor de char
+
+```c
+char letras[20];
+```
+
+---
+
+#  Strings
+
+Strings em C são vetores de caracteres.
+
+## Exemplo
+
+```c
+char nome[20];
+```
+
+---
+
+# Limitações dos Vetores
+
+- Tamanho fixo
+- Não podem armazenar tipos diferentes
+- Não aumentam automaticamente
+- Acesso inválido pode causar erros
+
+---
+
+#  Erro Comum — Acesso Fora do Vetor
+
+## Exemplo incorreto
+
+```c
+numeros[5] = {10, 20, 30, 40, 50};
+numeros[10] = 5;
+```
+
+Se o vetor possui apenas 5 posições, isso gera comportamento indefinido.
+
+---
+
 ---
 
 # Exemplo de Vetor
@@ -309,15 +599,35 @@ O índice `i` percorre todas as posições do vetor.
 
 ---
 
-# Exercício
+#  Resumo Geral
 
-## Exercício 1
+| Característica | Informação |
+|---|---|
+| Índice inicial | 0 |
+| Tipo dos elementos | Iguais |
+| Tamanho | Fixo |
+| Acesso | Por índice |
+| Estrutura mais usada | `for` |
+| Memória | Contínua |
+
+# Exercícios
+
+## Exercícios 1
 
 Faça um programa em C que:
 
 1. Crie um vetor de 5 posições do tipo inteiro
 2. Solicite ao usuário que digite os valores
 3. Exiba todos os valores armazenados no vetor
+4. Ler 10 números e mostrar todos
+5. Calcular a média de um vetor
+6. Encontrar o maior valor
+7. Encontrar o menor valor
+8. Somar todos os elementos
+9. Contar números pares
+10. Inverter os elementos do vetor
+11. Buscar um valor dentro do vetor
+
 
 ### Exemplo de saída
 
