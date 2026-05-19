@@ -9,6 +9,27 @@ Imagine um sistema que precise guardar as notas de 30 alunos. Criar uma variáve
 float nota1, nota2, nota3, nota4...
 ```
 
+```c
+#include <stdio.h>
+
+int main(){
+    float nota1, nota2, nota3, nota4,nota5, nota6, nota7, nota8, nota9, nota10;
+
+    scanf("%f", &nota1);
+    scanf("%f", &nota2);
+    scanf("%f", &nota3);
+    scanf("%f", &nota4);
+    scanf("%f", &nota5);
+    scanf("%f", &nota6);
+    scanf("%f", &nota7);
+    scanf("%f", &nota8);
+    scanf("%f", &nota9);
+    scanf("%f", &nota10);
+
+    return 0;
+}
+```
+
 Para resolver esse problema, utilizamos **vetores**.
 
 Os vetores permitem armazenar vários dados em uma única estrutura, facilitando a organização, manipulação e processamento das informações.
@@ -616,17 +637,16 @@ O índice `i` percorre todas as posições do vetor.
 
 Faça um programa em C que:
 
-1. Crie um vetor de 5 posições do tipo inteiro
-2. Solicite ao usuário que digite os valores
-3. Exiba todos os valores armazenados no vetor
-4. Ler 10 números e mostrar todos
-5. Calcular a média de um vetor
-6. Encontrar o maior valor
-7. Encontrar o menor valor
-8. Somar todos os elementos
-9. Contar números pares
-10. Inverter os elementos do vetor
-11. Buscar um valor dentro do vetor
+1. Crie um vetor de 5 posições do tipo inteiro e Solicite ao usuário que digite os valores
+2. Exiba todos os valores armazenados no vetor
+3. Ler 10 números e mostrar todos
+4. Calcular a média de um vetor
+5. Encontrar o maior valor
+6. Encontrar o menor valor
+7. Somar todos os elementos
+8. Contar números pares
+9. Inverter os elementos do vetor
+10. Buscar um valor dentro do vetor
 
 
 ### Exemplo de saída
