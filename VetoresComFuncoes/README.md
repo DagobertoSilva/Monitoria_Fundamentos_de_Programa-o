@@ -65,7 +65,7 @@ int main() {
     int vetor1[5];
     int vetor2[5];
     int vetor3[5];
-
+//RECEBENDO VETORES------------------------------------------
     for(int i = 0; i < 5; i++) {
         scanf("%d", &vetor1[i]);
     }
@@ -77,9 +77,9 @@ int main() {
     for(int i = 0; i < 5; i++) {
         scanf("%d", &vetor3[i]);
     }
-
+//--------------------------------------------
     printf("\n\n");
-
+//IMPRIMINDO VETORES------------------------------------------
     for(int i = 0; i < 5; i++) {
         printf("Numeros[%d]: %d\n\n", i, vetor1[i]);
     }
@@ -93,11 +93,12 @@ printf("\n\n");
     for(int i = 0; i < 5; i++) {
         printf("Numeros[%d]: %d\n", i, vetor3[i]);
     }
-
+//----------------------------------------------------
     return 0;
 }
 ```
 
+*BEM CANSATIVO NÃO?!*
 ---
 
 # Revisão Rápida — Vetores
