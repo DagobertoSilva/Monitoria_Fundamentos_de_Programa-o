@@ -478,62 +478,338 @@ int main() {
 
 ---
 
+# Tabela ASCII
+
+## O que é ASCII?
+
+ASCII significa:
+
+```txt
+American Standard Code for Information Interchange
+```
+
+É uma tabela utilizada para representar caracteres através de números.
+
+Cada caractere possui um valor numérico associado.
+
+---
+
+# Como Funciona
+
+O computador armazena caracteres utilizando códigos numéricos.
+
+## Exemplos
+
+| Caractere | Código ASCII |
+|---|---|
+| A | 65 |
+| B | 66 |
+| a | 97 |
+| b | 98 |
+| 0 | 48 |
+| 1 | 49 |
+
+---
+
+# Caracteres em C
+
+Em C, caracteres são armazenados utilizando o tipo:
+
+```c
+char
+```
+
+Internamente, um `char` guarda um valor numérico da tabela ASCII.
+
+---
+
+# Exemplo
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    char letra = 'A';
+
+    printf("%d\n", letra);
+
+    return 0;
+}
+```
+
+## Saída
+
+```txt
+65
+```
+
+---
+
+# Convertendo Código ASCII para Caractere
+
+Também podemos fazer o contrário.
+
+## Exemplo
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    int codigo = 66;
+
+    printf("%c\n", codigo);
+
+    return 0;
+}
+```
+
+## Saída
+
+```txt
+B
+```
+
+---
+
+# Letras Maiúsculas e Minúsculas
+
+Na tabela ASCII:
+
+- Letras maiúsculas possuem códigos menores
+- Letras minúsculas possuem códigos maiores
+
+## Exemplos
+
+| Caractere | ASCII |
+|---|---|
+| A | 65 |
+| Z | 90 |
+| a | 97 |
+| z | 122 |
+
+---
+
+# Diferença entre Maiúscula e Minúscula
+
+A diferença entre uma letra maiúscula e minúscula normalmente é:
+
+```txt
+32
+```
+
+## Exemplo
+
+```txt
+'a' = 97
+'A' = 65
+
+97 - 65 = 32
+```
+
+---
+
+# Exemplo Prático
+
+Convertendo letra minúscula para maiúscula:
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    char letra = 'a';
+
+    letra = letra - 32;
+
+    printf("%c\n", letra);
+
+    return 0;
+}
+```
+
+## Saída
+
+```txt
+A
+```
+
+---
+
+# Caracteres Numéricos
+
+Os números também possuem códigos ASCII.
+
+| Caractere | ASCII |
+|---|---|
+| '0' | 48 |
+| '1' | 49 |
+| '2' | 50 |
+| '9' | 57 |
+
+---
+
+# Convertendo Caractere Numérico para Inteiro
+
+## Exemplo
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    char numero = '5';
+
+    int valor = numero - '0';
+
+    printf("%d\n", valor);
+
+    return 0;
+}
+```
+
+## Saída
+
+```txt
+5
+```
+
+---
+
+# Percorrendo Caracteres com ASCII
+
+## Exemplo
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    for(char c = 'A'; c <= 'Z'; c++) {
+
+        printf("%c = %d\n", c, c);
+
+    }
+
+    return 0;
+}
+```
+
+---
+
+# Tabela ASCII Parcial
+
+| ASCII | Caractere |
+|---|---|
+| 32 | Espaço |
+| 48 | 0 |
+| 65 | A |
+| 90 | Z |
+| 97 | a |
+| 122 | z |
+
+---
+
+# Resumo
+
+| Conceito | Informação |
+|---|---|
+| ASCII | Representação numérica de caracteres |
+| Tipo usado em C | `char` |
+| 'A' | 65 |
+| 'a' | 97 |
+| '0' | 48 |
+| Diferença entre A e a | 32 |
+
+---
+
 # Exercícios
 
 ## Exercício 1
 
-Faça um programa que leia um nome e exiba na tela.
+Mostre o código ASCII de uma letra digitada pelo usuário.
 
 ---
 
 ## Exercício 2
 
-Leia uma frase completa utilizando `fgets`.
+Leia um número ASCII e exiba o caractere correspondente.
 
 ---
 
 ## Exercício 3
 
-Mostre cada caractere da string em uma linha diferente.
+Converta uma letra minúscula para maiúscula.
 
 ---
 
 ## Exercício 4
 
-Conte quantos caracteres existem em uma string.
+Mostre todas as letras do alfabeto com seus códigos ASCII.
 
 ---
 
 ## Exercício 5
 
-Leia dois nomes e compare utilizando `strcmp`.
+Leia um caractere numérico e converta para inteiro.
 
----
+
 
 ## Exercício 6
 
-Concatene nome e sobrenome utilizando `strcat`.
+Faça um programa que leia um nome e exiba na tela.
 
 ---
 
 ## Exercício 7
 
-Faça um programa que substitua a primeira letra de uma string.
+Leia uma frase completa utilizando `fgets`.
 
 ---
 
 ## Exercício 8
 
-Conte quantas vogais existem em uma string.
+Mostre cada caractere da string em uma linha diferente.
 
 ---
 
 ## Exercício 9
 
-Inverta uma string.
+Conte quantos caracteres existem em uma string.
 
 ---
 
 ## Exercício 10
+
+Leia dois nomes e compare utilizando `strcmp`.
+
+---
+
+## Exercício 11
+
+Concatene nome e sobrenome utilizando `strcat`.
+
+---
+
+## Exercício 12
+
+Faça um programa que substitua a primeira letra de uma string.
+
+---
+
+## Exercício 13
+
+Conte quantas vogais existem em uma string.
+
+---
+
+## Exercício 14
+
+Inverta uma string.
+
+---
+
+## Exercício 15
 
 Verifique se uma palavra é palíndromo.
